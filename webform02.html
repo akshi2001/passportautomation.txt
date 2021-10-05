@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>Form Validation Using Java script</title>
+<style>
+body
+{
+background-image:url('https://pixabay.com/get/ge3175b8d1fd8768ae642106268a9ff4b9733716275ab6f8ba1c9bc41f1c76368cc4e7ade6eb7da17d5f26e555f1e348afcbd2d472cd6cb51ac94ea91995ef2df17e13da4c1fd241b7aacb59581697ef0_1920.jpg')
+}
+</style>
+<script type="text/javascript">
+fuction validation()
+{
+if(document.f1.name.value=="")
+{
+window.alert("plz Enter Your Name");
+reurn false;
+}
+else if(document.f1.email.value=="")
+{
+window.alert("Plz Enter Your Valid E-mail");
+return false
+}
+else if(document.f1.addr.value=="")
+{
+window.alert("Plz Enter Your Address");
+return false;
+}
+else id(documnet.f1.countrt.selectedIndex==0)
+{
+window.alert("pls select your country");
+return false;
+}
+else
+if((document.f1.rdo[0].checked==false)&&(document.f1.rdo[1].checked==false)&&(documnet.f1.rdo[2].checked==false))
+{
+window.alert("Plz Choose Your Gender");
+return false;
+}
+
+else
+if((document.f1.chk[0].checked==false)&&(document.f1.chk[1].checked==false)&&(documnet.f1.chk[2].checked==false))
+{
+window.alet("Plz Select Your Qualification");
+return false;
+}
+else
+return true;
+}
+</script></head>
+<body bgcolor="blue">
+<h3 style="text-align:center">PASSPORT AUTOMATION SYSTEM</h3>
+<form name="f1"action="Register.html"onsubmit="return validation()">
+<fieldset>
+<legend>Registration Form</legend><br/>
+<table border="1">
+<tr><td>Name:</td><td><input type="text"name="name"size="31"></td></tr>
+<tr><td>E-mail:</td><td><input type="text"name="email"size="31"></td></tr>
+<tr><td>DOB:</td><td><input type="text"name="DOB"size="31"></td></tr>
+<tr><td>Father's Name:</td><td><input type="text"name="Father's Name"size="31"></td></tr>
+<tr><td>Mother's Name:</td><td><input type="text"name="Mother's Name"size="31"></td></tr>
+<tr><td>Address:</td><td><Textarea name="addr"rows="5"
+cols="25"></Textarea></td></tr>
+<tr>
+<td>Country:</td>
+<td><select name="country">
+<option>---Select Your Country---</option>
+<option>India</option>
+<option>China</option>
+<option>Nepal</option>
+<option>Myanmmar</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>Gender:</td>
+<td>
+<input type="radio"name="rdo">Male
+<input type="radio"nmae="rdo">Female<input type="radio"
+name="rdo">Transgender
+</td>
+</tr>
+</table><br/>
+<input type="submit"value="Register"></fieldset></form></body></html>
